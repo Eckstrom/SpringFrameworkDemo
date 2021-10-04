@@ -8,18 +8,14 @@ public class SpringApplication {
 		//Load the spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
+		//Retrieve bean from spring container
 		Coach coach = context.getBean("myCoach", Coach.class);
 		
+		//Call methods on the bean
 		System.out.println(coach.getDailyWorkout());
 		
-		context.close();
-		
-		//Retrieve bean from spring container
-		
-		//Call methods on the bean
-		
 		//Close the application context
-
+		context.close();
 	}
 
 }
