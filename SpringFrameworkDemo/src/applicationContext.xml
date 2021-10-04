@@ -13,9 +13,14 @@
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
-    <!-- Coach bean -->
+    
+    <!-- Functionality beans -->
     <bean id = "myCoach"
     	class = "com.eckstrom.springframeworkdemo.BaseballCoach">
+    	<constructor-arg ref = "myFortuneService"/>
+    </bean>
+    <bean id = "myFortuneService"
+    	  class = "com.eckstrom.springframeworkdemo.HappyFortuneService">
     </bean>
     
 </beans>

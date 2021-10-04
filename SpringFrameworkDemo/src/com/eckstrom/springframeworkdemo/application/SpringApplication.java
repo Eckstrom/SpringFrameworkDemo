@@ -1,6 +1,8 @@
-package com.eckstrom.springframeworkdemo;
+package com.eckstrom.springframeworkdemo.application;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.eckstrom.springframeworkdemo.coach.Coach;
 
 public class SpringApplication {
 
