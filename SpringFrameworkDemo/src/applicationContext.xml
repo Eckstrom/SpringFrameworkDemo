@@ -9,18 +9,18 @@
 
     <!-- Define your beans here -->
     <!-- Logger bean -->
-    <bean id="myLoggerConfig" class="com.eckstrom.springframeworkdemo.MyLoggerConfig" init-method="initLogger">
+    <bean id="myLoggerConfig" class="com.eckstrom.springframeworkdemo.logger.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
     
     <!-- Functionality beans -->
     <bean id = "myCoach"
-    	class = "com.eckstrom.springframeworkdemo.BaseballCoach">
+    	class = "com.eckstrom.springframeworkdemo.coach.TrackCoach">
     	<constructor-arg ref = "myFortuneService"/>
     </bean>
     <bean id = "myFortuneService"
-    	  class = "com.eckstrom.springframeworkdemo.HappyFortuneService">
+    	  class = "com.eckstrom.springframeworkdemo.fortune.HappyFortuneService">
     </bean>
     
 </beans>
