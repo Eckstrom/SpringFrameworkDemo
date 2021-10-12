@@ -30,5 +30,15 @@ public class TrackCoach implements Coach {
 		this.fortuneService = fortuneService;
 		
 	}
-
+	
+	//Init method
+	public void init() {
+		System.out.println("Init has been called.");
+	}
+	
+	//Destroy method
+	public void destroy() {
+		System.out.println("Destroy has been called.");
+	}
+	
 }
