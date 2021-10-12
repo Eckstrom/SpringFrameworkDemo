@@ -25,4 +25,10 @@ public class TrackCoach implements Coach {
 		return "Just do it! " + fortuneService.getFortune();
 	}
 
+	@Override
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+		
+	}
+
 }

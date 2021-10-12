@@ -7,8 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <!-- Load the properties file: sport.properties -->
-    <context:property-placeholder location="classpath:sport.properties"/>
+    <!-- An application Context file designed to test various bean scopes -->
 
     <!-- Define your beans here -->
     <!-- Logger bean -->
@@ -19,20 +18,12 @@
     
     <!-- Functionality beans -->
     <bean id = "myCoach"
-    	class = "com.eckstrom.springframeworkdemo.coach.TrackCoach">
+    	class = "com.eckstrom.springframeworkdemo.coach.TrackCoach"
+    	scope = "prototype">
     	<constructor-arg ref = "myFortuneService"/>
     </bean>
     <bean id = "myFortuneService"
     	  class = "com.eckstrom.springframeworkdemo.fortune.HappyFortuneService">
-    </bean>
-    
-    <bean
-    	id = "myCricketCoach"
-    	class = "com.eckstrom.springframeworkdemo.coach.CricketCoach">
-    	<property name="fortuneService" ref = "myFortuneService"/>
-    	
-    	<property name = "emailAddress" value = "${email}"/>
-    	<property name = "team" value = "${team}"/>
     </bean>
         
 </beans>

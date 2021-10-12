@@ -6,8 +6,8 @@ public class BaseballCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
-	public BaseballCoach(FortuneService thisFortuneService) {
-		fortuneService = thisFortuneService;
+	public BaseballCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
 	}
 	
 	@Override
@@ -18,8 +18,14 @@ public class BaseballCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		
-		//Use fortuneservice to give daily fortune 
+		//Use fortune service to give daily fortune 
 		return fortuneService.getFortune();
+	}
+
+	@Override
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+		
 	}
 
 }
