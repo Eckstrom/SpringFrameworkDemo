@@ -15,7 +15,6 @@ public class SpringApplication {
 		
 		//Call methods on the bean
 		System.out.println(coach.getDailyWorkout());
-		
 		System.out.println(coach.getDailyFortune());
 		
 		//Close the application context

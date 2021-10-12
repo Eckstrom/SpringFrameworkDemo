@@ -4,6 +4,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.eckstrom.springframeworkdemo.coach.Coach2;
 
+//This class is meant to demonstrate how Spring scans and defines beans internally with annotations
+//Notice how the TennisCoach class contains @Component at the class header, and there is no bean definition
 public class AnnotationsDemoApp {
 
 	public static void main(String[] args) {
