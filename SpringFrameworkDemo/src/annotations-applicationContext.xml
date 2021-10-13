@@ -10,6 +10,7 @@
     <!-- Enable component scanning: -->
         
     <context:component-scan base-package="com.eckstrom.springframeworkdemo"></context:component-scan>
+    <context:property-placeholder location="classpath:sport.properties"/>
     
         <!-- Logger bean -->
     <bean id="myLoggerConfig" class="com.eckstrom.springframeworkdemo.logger.MyLoggerConfig" init-method="initLogger">
