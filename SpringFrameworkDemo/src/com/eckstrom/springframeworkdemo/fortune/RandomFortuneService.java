@@ -2,6 +2,8 @@ package com.eckstrom.springframeworkdemo.fortune;
 
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -17,10 +19,19 @@ public class RandomFortuneService implements FortuneService {
 	@Value("${randomArray}")
 	String[] fortune;
 	
+	String[] initFortune = new String[3];
+	
+	@PostConstruct
+	public void init() {
+		initFortune[0] = val1;
+		initFortune[1] = val2;
+		initFortune[2] = val3;
+	}
+	
 	@Override
 	public String getFortune() {
-		int random = new Random().nextInt(fortune.length);
-	    return fortune[random];
+		int random = new Random().nextInt(initFortune.length);
+	    return initFortune[random];
 	}
 
 }

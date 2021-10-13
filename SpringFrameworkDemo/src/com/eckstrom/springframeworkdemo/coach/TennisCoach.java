@@ -2,11 +2,13 @@ package com.eckstrom.springframeworkdemo.coach;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.eckstrom.springframeworkdemo.fortune.FortuneService;
 
 @Component
+//@Scope("prototype")
 public class TennisCoach implements Coach2 {
 	
 	
@@ -20,7 +22,7 @@ public class TennisCoach implements Coach2 {
 	}
 	
 //	@Autowired
-//	Can be uncommented for constuctor injection
+//	Can be uncommented for constructor injection
 //	public TennisCoach(FortuneService fortuneService) {
 //		this.fortuneService = fortuneService;
 //	}
